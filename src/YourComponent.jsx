@@ -8,7 +8,7 @@ const YourComponent = ({ ticker, concept }) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const headers = { 'User-Agent': 'udishj@gmail.com', "mode": "no-cors"};
+                const headers = { 'User-Agent': 'udishj@gmail.com'};
                 const companyTickers = await axios.get("https://www.sec.gov/files/company_tickers.json", { headers });
                 const companyData = companyTickers.data;
                 const cik = companyData[ticker].cik_str.padStart(10, '0');
